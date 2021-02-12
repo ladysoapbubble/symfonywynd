@@ -1,0 +1,17 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+app_catalog_categories:
+  path: /catalog/categories
+  controller: App\Controller\CatalogController::categories
+
+api_login_check:
+  path: /api/login_check
+  controller: App\Controller\SecurityController::login
+  methods: POST
+#  controller: App\Controller\IndexController::index
+
+app_homepage:
+  path: /
+  controller: App\Controller\IndexController::index
