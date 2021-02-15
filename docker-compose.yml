@@ -27,6 +27,7 @@ services:
     volumes:
       - ./app:/symfony
     command: sleep 10000
+    restart: always
     container_name: ${PROJECT_NAME}-php-cli
 
   mysql:

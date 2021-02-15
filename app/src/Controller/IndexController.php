@@ -15,8 +15,7 @@ class IndexController extends AbstractController
      */
     public function index()
     {
-
-      $json = [
+        $json = [
           "routes" => [
               "catalog" => [
                   "categories" => [
@@ -39,11 +38,14 @@ class IndexController extends AbstractController
                   ]
               ]
           ]
-      ];
+        ];
+
+        $response = new Response();
+        $response->setContent(json_encode($json));
+        $response->headers->set('Content-Type', 'application/json');
 
 
-
-      return $this->json($json);
+        return $this->json($json);
     }
 
 }
